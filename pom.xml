@@ -64,13 +64,6 @@
                             <goal>report</goal>
                         </goals>
                     </execution>
-                    <execution>
-                        <id>compile</id>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                    </execution>
                 </executions>
             </plugin>
         </plugins>

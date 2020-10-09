@@ -20,16 +20,14 @@ class ConditionerTest {
     @Test
     void increaseCurrentTemperature(){
         Conditioner conditioner = new Conditioner();
-        int actual = 15;
-        conditioner.increaseCurrentTemperature(actual);
+        conditioner.increaseCurrentTemperature();
         System.out.println(conditioner.getCurrentTemperature());
     }
 
     @Test
     void decreaseCurrentTemperature(){
         Conditioner conditioner = new Conditioner();
-        int actual = 15;
-        conditioner.decreaseCurrentTemperature(actual);
+        conditioner.decreaseCurrentTemperature();
         System.out.println(conditioner.getCurrentTemperature());
     }
 }
