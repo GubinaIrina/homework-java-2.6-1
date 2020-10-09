@@ -1,0 +1,3 @@
+'setCurrentTemperature' , 5
+'setCurrentTemperatureUnderMax' , 31
+'setCurrentTemperatureBeforeMin' , -1
