@@ -1,11 +1,8 @@
 package ru.netology.domain;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ConditionerTest {
 
@@ -25,9 +22,41 @@ class ConditionerTest {
     }
 
     @Test
+    void increaseCurrentTemperatureUnderMax(){
+        Conditioner conditioner = new Conditioner();
+        int currentTemperature = 30;
+        conditioner.increaseCurrentTemperatureUnderAndBeforeMax(currentTemperature);
+        System.out.println(conditioner.getCurrentTemperature());
+    }
+
+    @Test
+    void increaseCurrentTemperatureBeforeMax(){
+        Conditioner conditioner = new Conditioner();
+        int currentTemperature = 29;
+        conditioner.increaseCurrentTemperatureUnderAndBeforeMax(currentTemperature);
+        System.out.println(conditioner.getCurrentTemperature());
+    }
+
+    @Test
     void decreaseCurrentTemperature(){
         Conditioner conditioner = new Conditioner();
         conditioner.decreaseCurrentTemperature();
+        System.out.println(conditioner.getCurrentTemperature());
+    }
+
+    @Test
+    void decreaseCurrentTemperatureUnderMin(){
+        Conditioner conditioner = new Conditioner();
+        int currentTemperature = 1;
+        conditioner.decreaseCurrentTemperatureUnderAndBeforeMin(currentTemperature);
+        System.out.println(conditioner.getCurrentTemperature());
+    }
+
+    @Test
+    void decreaseCurrentTemperatureBeforeMin(){
+        Conditioner conditioner = new Conditioner();
+        int currentTemperature = 0;
+        conditioner.decreaseCurrentTemperatureUnderAndBeforeMin(currentTemperature);
         System.out.println(conditioner.getCurrentTemperature());
     }
 }
