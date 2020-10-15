@@ -20,22 +20,21 @@ class ConditionerTest {
         conditioner.increaseCurrentTemperature();
         System.out.println(conditioner.getCurrentTemperature());
     }
-
     @Test
-    void increaseCurrentTemperatureUnderMax(){
+    void increaseCurrentTemperature1(){
         Conditioner conditioner = new Conditioner();
-        int currentTemperature = 30;
-        conditioner.increaseCurrentTemperatureUnderAndBeforeMax(currentTemperature);
+        conditioner.setCurrentTemperature(29);
+        conditioner.increaseCurrentTemperature();
+        System.out.println(conditioner.getCurrentTemperature());
+    }
+    @Test
+    void increaseCurrentTemperature2(){
+        Conditioner conditioner = new Conditioner();
+        conditioner.setCurrentTemperature(30);
+        conditioner.increaseCurrentTemperature();
         System.out.println(conditioner.getCurrentTemperature());
     }
 
-    @Test
-    void increaseCurrentTemperatureBeforeMax(){
-        Conditioner conditioner = new Conditioner();
-        int currentTemperature = 29;
-        conditioner.increaseCurrentTemperatureUnderAndBeforeMax(currentTemperature);
-        System.out.println(conditioner.getCurrentTemperature());
-    }
 
     @Test
     void decreaseCurrentTemperature(){
@@ -43,20 +42,19 @@ class ConditionerTest {
         conditioner.decreaseCurrentTemperature();
         System.out.println(conditioner.getCurrentTemperature());
     }
-
     @Test
-    void decreaseCurrentTemperatureUnderMin(){
+    void decreaseCurrentTemperature1(){
         Conditioner conditioner = new Conditioner();
-        int currentTemperature = 1;
-        conditioner.decreaseCurrentTemperatureUnderAndBeforeMin(currentTemperature);
+        conditioner.setCurrentTemperature(1);
+        conditioner.decreaseCurrentTemperature();
+        System.out.println(conditioner.getCurrentTemperature());
+    }
+    @Test
+    void decreaseCurrentTemperature2(){
+        Conditioner conditioner = new Conditioner();
+        conditioner.setCurrentTemperature(0);
+        conditioner.decreaseCurrentTemperature();
         System.out.println(conditioner.getCurrentTemperature());
     }
 
-    @Test
-    void decreaseCurrentTemperatureBeforeMin(){
-        Conditioner conditioner = new Conditioner();
-        int currentTemperature = 0;
-        conditioner.decreaseCurrentTemperatureUnderAndBeforeMin(currentTemperature);
-        System.out.println(conditioner.getCurrentTemperature());
-    }
 }

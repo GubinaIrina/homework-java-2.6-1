@@ -60,17 +60,7 @@ public class Conditioner {
         setCurrentTemperature(currentTemperature);
     }
 
-    public void increaseCurrentTemperatureUnderAndBeforeMax (int currentTemperature) {
-        currentTemperature++;
-        setCurrentTemperature(currentTemperature);
-    }
-
     public void decreaseCurrentTemperature() {
-        currentTemperature--;
-        setCurrentTemperature(currentTemperature);
-    }
-
-    public void decreaseCurrentTemperatureUnderAndBeforeMin (int currentTemperature) {
         currentTemperature--;
         setCurrentTemperature(currentTemperature);
     }
