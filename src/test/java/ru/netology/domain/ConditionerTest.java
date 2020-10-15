@@ -21,14 +21,14 @@ class ConditionerTest {
         System.out.println(conditioner.getCurrentTemperature());
     }
     @Test
-    void increaseCurrentTemperature1(){
+    void increaseCurrentTemperatureBeforeMax(){
         Conditioner conditioner = new Conditioner();
         conditioner.setCurrentTemperature(29);
         conditioner.increaseCurrentTemperature();
         System.out.println(conditioner.getCurrentTemperature());
     }
     @Test
-    void increaseCurrentTemperature2(){
+    void increaseCurrentTemperatureUnderMax(){
         Conditioner conditioner = new Conditioner();
         conditioner.setCurrentTemperature(30);
         conditioner.increaseCurrentTemperature();
@@ -43,14 +43,14 @@ class ConditionerTest {
         System.out.println(conditioner.getCurrentTemperature());
     }
     @Test
-    void decreaseCurrentTemperature1(){
+    void decreaseCurrentTemperatureUnderMin(){
         Conditioner conditioner = new Conditioner();
         conditioner.setCurrentTemperature(1);
         conditioner.decreaseCurrentTemperature();
         System.out.println(conditioner.getCurrentTemperature());
     }
     @Test
-    void decreaseCurrentTemperature2(){
+    void decreaseCurrentTemperatureBeforeMin(){
         Conditioner conditioner = new Conditioner();
         conditioner.setCurrentTemperature(0);
         conditioner.decreaseCurrentTemperature();
